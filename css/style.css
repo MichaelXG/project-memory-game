@@ -1,0 +1,191 @@
+/* .CSS com toda a estrutura da aplicação */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+   font-family: 'Coda', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 50px;
+  padding-top: 10px;
+}
+
+.Clicks {
+    font-weight: 300;
+  padding-top: 10px;
+}
+
+.Playground {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.Playground .box {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.score-icon {
+  font-size: 30px;
+  color: #80D8FF;
+}
+
+.reset-icon {
+    font-size: 30px;
+  color: #80D8FF;
+}
+
+@media only screen and (max-width: 680px){
+  .Playground .box{
+    width: 55px;
+    height: 55px;
+    line-height: 75px;
+  }
+
+  .Playground {
+    width: 390px;
+  }
+}
+
+@media only screen and (max-width: 350px){
+  .Playground .box{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 10px 10px 0 !important;
+  }
+  .Playground {
+    width: 240px;
+  }
+}
+
+.Playground .box:nth-child(4n) {
+  margin: 0 0 15px 0;
+}
+
+.Playground .box:nth-child(n+13) {
+  margin: 0 30px 0 0;
+}
+
+.Playground .box:nth-child(n+13):nth-child(4n) {
+  margin: 0;
+}
+
+.Playground .box.open {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  background: #02b3e4;
+  cursor: pointer;
+}
+
+.Playground .box.show {
+  font-size: 33px;
+}
+
+.Playground .box.match {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+}
+
+.Playground .box.notmatch {
+  background: #BDBDBD;
+}
+
+#score-panel {
+  text-align: left;
+  width: 380px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+#score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+#score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+#score-panel .PlayAgain {
+  float: right;
+  cursor: pointer;
+}
+
+*::-moz-selection {
+  background: transparent;
+}
+
+*::selection {
+  background: transparent;
+}
+
+.swal2-overlay {
+  background-color: white;
+}
+
+.font-color {
+  color:  #02ccba;
+}
