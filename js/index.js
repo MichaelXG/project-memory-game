@@ -138,7 +138,6 @@ var addboxListener = function () {
 			$moveNum.html(Clicks);
 		}
 
-
 		if (totalbox === match) {
 			setRating(Clicks);
 			var score = setRating(Clicks).score;
